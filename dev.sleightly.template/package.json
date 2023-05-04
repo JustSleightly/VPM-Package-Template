@@ -1,0 +1,25 @@
+{
+  "name": "dev.sleightly.template",
+  "displayName": "JS - Template",
+  "version": "1.0.0",
+  "description": "A VPM Package Template",
+  "url": "https://github.com/JustSleightly/JS-Template",
+  "gitDependencies": {},
+  "vpmDependencies": {
+    "com.vrchat.avatars": "^3.1.0"
+  },
+  "legacyFolders": {},
+  "legacyFiles": {},
+  "type": "tool",
+  "keywords": [
+  "JustSleightly",
+  "Sleightly",
+  "VRChat",
+  "Template"
+  ],
+  "author": {
+    "name": "JustSleightly",
+    "email": "just@sleightly.dev",
+    "url": "https://github.com/JustSleightly"
+  }
+}
