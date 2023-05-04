@@ -1,7 +1,7 @@
 {
   "name": "dev.sleightly.template",
   "displayName": "JS - Template",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A VPM Package Template",
   "url": "https://github.com/JustSleightly/JS-Template",
   "gitDependencies": {},
