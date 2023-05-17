@@ -23,7 +23,7 @@ jobs:
     
       - name: get version
         id: version
-        uses: notiz-dev/github-action-json-property@7c8cf5cc36eb85d8d287a8086a39dac59628eb31
+        uses: notiz-dev/github-action-json-property@v0.2.0
         with: 
             path: "${{env.packageName}}/package.json"
             prop_path: "version"
@@ -66,6 +66,7 @@ jobs:
         if: ${{ steps.checkReleaseTag.outputs.exists == 'false' }}
         uses: softprops/action-gh-release@1e07f4398721186383de40550babbdf2b84acfc5
         with:
+          name: "${{ github.event.repository.name }} ${{ steps.version.outputs.prop }}"
           tag_name: "v${{ steps.version.outputs.prop }}"
           files: |
             ${{ env.zipFile }}
