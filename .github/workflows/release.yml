@@ -30,7 +30,7 @@ jobs:
       
       - name: generate tag
         id: tag
-        run: echo prop="v${{ steps.version.outputs.prop }}" >> $GITHUB_OUTPUT
+        run: echo prop="v${{ steps.version.outputs.value }}" >> $GITHUB_OUTPUT
 
       - name: Check if Release Tag Exists
         id: checkReleaseTag
@@ -66,8 +66,8 @@ jobs:
         if: ${{ steps.checkReleaseTag.outputs.exists == 'false' }}
         uses: softprops/action-gh-release@de2c0eb89ae2a093876385947365aca7b0e5f844
         with:
-          name: "${{ github.event.repository.name }} v${{ steps.version.outputs.prop }}"
-          tag_name: "v${{ steps.version.outputs.prop }}"
+          name: "${{ github.event.repository.name }} v${{ steps.version.outputs.value }}"
+          tag_name: "v${{ steps.version.outputs.value }}"
           files: |
             ${{ env.zipFile }}
             ${{ env.unityPackage }}
