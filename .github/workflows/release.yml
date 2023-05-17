@@ -66,7 +66,7 @@ jobs:
         if: ${{ steps.checkReleaseTag.outputs.exists == 'false' }}
         uses: softprops/action-gh-release@1e07f4398721186383de40550babbdf2b84acfc5
         with:
-          name: "${{ github.event.repository.name }} ${{ steps.version.outputs.prop }}"
+          name: "${{ github.event.repository.name }} v${{ steps.version.outputs.prop }}"
           tag_name: "v${{ steps.version.outputs.prop }}"
           files: |
             ${{ env.zipFile }}
