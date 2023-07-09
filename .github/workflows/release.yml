@@ -51,8 +51,15 @@ jobs:
           type: "zip"
           directory: "${{env.packageName}}/"
           filename: "../${{env.zipFile}}" # make the zip file one directory up, since we start one directory in above
+
+      - name: Create Packages Directory and Move Files
+        run: |
+          if [ ! -d "Packages" ]; then
+            mkdir Packages
+            mv ${{env.packageName}} Packages/
+          fi
           
-      - run: find "${{env.packageName}}/" -name \*.meta >> metaList
+      - run: find "Packages/${{env.packageName}}/" -name \*.meta >> metaList
         if: ${{ steps.checkReleaseTag.outputs.exists == 'false' }}
           
       - name: Create UnityPackage
@@ -71,4 +78,4 @@ jobs:
           files: |
             ${{ env.zipFile }}
             ${{ env.unityPackage }}
-            ${{ env.packageName }}/package.json
+            Packages/${{ env.packageName }}/package.json
