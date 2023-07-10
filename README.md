@@ -35,3 +35,8 @@ This is modified from [Dreadrith's template](https://github.com/Dreadrith/Listed
         - Rename `dev.sleightly.template.meta`
 4. Add any necessary scripts, resources, [samples](https://docs.unity3d.com/2019.4/Documentation/Manual/cus-samples.html), and other files
 5. Remove `Documentation~`, `Editor`, `Runtime`, `CHANGELOG.md`, and `LICENSE.md` if unused
+
+## Notes
+Folders that end in `~` such as `Documentation~` or `Samples~` are hidden from the Unity Project view within the editor.
+
+Therefore, when the package is exported as a `.unitypackage` whether manually or via automated GitHub workflow, such folders are omitted. The folders are still present in the `.zip` export and when imported through the [VRChat Creator Companion](https://vcc.docs.vrchat.com/vpm/packages/#community-packages)
