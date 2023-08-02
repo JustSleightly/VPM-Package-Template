@@ -7,7 +7,9 @@
     "VRC.SDKBase.Editor",
     "dev.sleightly.template"
   ],
-  "includePlatforms": [],
+  "includePlatforms": [
+      "Editor"
+  ],
   "excludePlatforms": [],
   "allowUnsafeCode": false,
   "autoReferenced": true,
