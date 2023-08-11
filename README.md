@@ -22,6 +22,7 @@ This is modified from [Dreadrith's template](https://github.com/Dreadrith/Listed
         - Line 7
         - Line 10
         - Line 11
+        - Line 12
     - Rename the folder `dev.sleightly.template` and edit its contents
         - Rename and Edit `Documentation~/dev.sleightly.template.md`
         - Rename and Edit `Editor/dev.sleightly.template.Editor.asmdef`
