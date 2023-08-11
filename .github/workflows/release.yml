@@ -8,7 +8,7 @@ on:
 
 env:
   packageName: "dev.sleightly.template"
-  packageDisplayName: "JSTemplate"
+  packageDisplayName: "Template"
 
 permissions:
   contents: write
