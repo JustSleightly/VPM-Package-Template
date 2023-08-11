@@ -8,7 +8,8 @@ on:
 
 env:
   packageName: "dev.sleightly.template"
-  packageDisplayName: "Template"
+  packageFileName: "JS-Template"
+  packageReleaseName: "VPM Package Template"
 
 permissions:
   contents: write
@@ -41,8 +42,8 @@ jobs:
       - name: Set Environment Variables
         if: ${{ steps.checkReleaseTag.outputs.exists == 'false' }}
         run: |
-          echo "zipFile=${{ env.packageDisplayName }}_v${{ steps.version.outputs.value }}".zip >> $GITHUB_ENV
-          echo "unityPackage=${{ env.packageDisplayName }}_v${{ steps.version.outputs.value }}.unitypackage" >> $GITHUB_ENV
+          echo "zipFile=${{ env.packageFileName }}_v${{ steps.version.outputs.value }}".zip >> $GITHUB_ENV
+          echo "unityPackage=${{ env.packageFileName }}_v${{ steps.version.outputs.value }}.unitypackage" >> $GITHUB_ENV
         
       - name: Create Zip
         if: ${{ steps.checkReleaseTag.outputs.exists == 'false' }}
@@ -73,7 +74,7 @@ jobs:
         if: ${{ steps.checkReleaseTag.outputs.exists == 'false' }}
         uses: softprops/action-gh-release@de2c0eb89ae2a093876385947365aca7b0e5f844
         with:
-          name: "${{ env.packageDisplayName }} v${{ steps.version.outputs.value }}"
+          name: "${{ env.packageReleaseName }} v${{ steps.version.outputs.value }}"
           tag_name: "v${{ steps.version.outputs.value }}"
           files: |
             ${{ env.zipFile }}
