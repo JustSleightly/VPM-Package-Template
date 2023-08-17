@@ -69,6 +69,16 @@ jobs:
         with:
           package-path: ${{ env.unityPackage }}
           include-files: metaList
+          
+      - name: Add Icon to UnityPackage
+        if: ${{ steps.checkReleaseTag.outputs.exists == 'false' }}
+        uses: foxscore/add-icon-to-unitypackage@v1
+        with:
+          package_path: ${{ env.unityPackage }}
+          icon_path: 'thumbnail.png'
+          package_not_found_behavior: 'warn'
+          icon_not_found_behavior: 'warn'
+          icon_already_present_behavior: 'warn'
         
       - name: Make Release
         if: ${{ steps.checkReleaseTag.outputs.exists == 'false' }}

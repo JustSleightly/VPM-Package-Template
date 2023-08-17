@@ -36,6 +36,7 @@ This is modified from [Dreadrith's template](https://github.com/Dreadrith/Listed
             - Use [VRChat's](https://vcc.docs.vrchat.com/vpm/packages#vpm-manifest-additions) and [Unity's](https://docs.unity3d.com/2019.4/Documentation/Manual/upm-manifestPkg.html) documentation for reference
     - Edit `.gitignore`
         - Rename `dev.sleightly.template.meta`
+    - Replace or remove `thumbnail.png` with your own `.unitypackage` import thumbnail
 4. Add any necessary scripts, resources, [samples](https://docs.unity3d.com/2019.4/Documentation/Manual/cus-samples.html), and other files
 5. Remove `Documentation~`, `Editor`, `Runtime`, `CHANGELOG.md`, and `LICENSE.md` if unused
 
