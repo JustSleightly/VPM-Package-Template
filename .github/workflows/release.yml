@@ -11,7 +11,7 @@ env:
   packagePath: "Packages/dev.sleightly.template"
   packageFileName: "JS-Template"
   packageReleaseName: "VPM Package Template"
-  triggerRepoUpdate: ${{ true }}
+  triggerRepoUpdate: ${{ false }}
 
 permissions:
   contents: write

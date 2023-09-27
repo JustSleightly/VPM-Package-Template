@@ -9,7 +9,7 @@ on:
   workflow_dispatch: 
 
 env:
-  triggerUpdate: ${{ true }}
+  triggerUpdate: ${{ false }}
   repoOwner: "JustSleightly"
   repoName: "vpm.sleightly.dev"
   repoBranch: "main"
