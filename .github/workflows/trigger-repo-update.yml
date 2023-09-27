@@ -10,7 +10,7 @@ on:
 
 env:
   triggerUpdate: ${{ true }}
-  repoOwner: "JustSleightly"
+  repoOwner: "justsleightly"
   repoName: "vpm.sleightly.dev"
   repoBranch: "main"
   workflowName: "build-listing.yml"
