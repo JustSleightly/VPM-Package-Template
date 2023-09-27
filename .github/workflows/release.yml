@@ -94,7 +94,7 @@ jobs:
             ./package.json
 
       - name: Trigger VPM Repo Listing Update
-        if: ${{ env.triggerRepoUpdate == 'true' }}
+        if: ${{ env.triggerRepoUpdate == 'true' && steps.checkReleaseTag.outputs.exists == 'false'}}
         uses: peter-evans/repository-dispatch@v2
         with:
           event-type: trigger-repo-update

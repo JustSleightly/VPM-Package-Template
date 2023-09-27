@@ -10,7 +10,7 @@ on:
 
 env:
   triggerUpdate: ${{ true }}
-  repoOwner: "justsleightly"
+  repoOwner: "JustSleightly"
   repoName: "vpm.sleightly.dev"
   repoBranch: "main"
   workflowName: "build-listing.yml"
@@ -27,10 +27,10 @@ jobs:
           github-token: ${{ env.accessToken }}
           script: |
             await github.rest.actions.createWorkflowDispatch({
-              owner: ${{ env.repoOwner }},
-              repo: ${{ env.repoName }},
-              workflow_id: ${{ env.workflowName }},
-              ref: ${{ env.repoBranch }},
+              owner: '${{ env.repoOwner }}',
+              repo: '${{ env.repoName }}',
+              workflow_id: '${{ env.workflowName }}',
+              ref: '${{ env.repoBranch }}',
             })
 
 # thanks to bd_, modified from this action: https://github.com/bdunderscore/modular-avatar/blob/main/.github/workflows/trigger-repo-rebuild.yml
