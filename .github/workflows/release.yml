@@ -11,6 +11,7 @@ env:
   packagePath: "Packages/dev.sleightly.template"
   packageFileName: "JS-Template"
   packageReleaseName: "VPM Package Template"
+  triggerRepoUpdate: ${{ true }}
 
 permissions:
   contents: write
@@ -91,3 +92,9 @@ jobs:
             ${{ env.zipFile }}
             ${{ env.unityPackage }}
             ./package.json
+
+      - name: Trigger VPM Repo Listing Update
+        if: ${{ env.triggerRepoUpdate == 'true' }}
+        uses: peter-evans/repository-dispatch@v2
+        with:
+          event-type: trigger-repo-update
