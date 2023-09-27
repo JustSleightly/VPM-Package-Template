@@ -15,7 +15,7 @@ This is modified from [Dreadrith's template](https://github.com/Dreadrith/Listed
 
 ## Instructions
 
-1. Create a new repository using the green `Use this template` button at the top of this page
+1. Create a new repository using this button: [<img src="https://user-images.githubusercontent.com/737888/185467681-e5fdb099-d99f-454b-8d9e-0760e5a6e588.png" height="25">](https://github.com/JustSleightly/VPM-Package-Template/generate/ "Use this template")
 2. Clone your new repository onto your PC within an **existing Unity project** under `Packages/` with any directory name
     - This will generate a fresh set of GUIDs for each file within this package template and prevent conflicts with other packages
 3. Modify the cloned files for your new package
