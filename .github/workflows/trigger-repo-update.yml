@@ -11,7 +11,7 @@ on:
 env:
   triggerUpdate: ${{ false }}
   repoOwner: "JustSleightly"
-  repoName: "vpm.sleightly.dev"
+  repoName: "VPM-Package-Listing-Template"
   repoBranch: "main"
   workflowName: "build-listing.yml"
   accessToken: ${{ secrets.VPM_TOKEN }}
